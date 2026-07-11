@@ -1,40 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>A. Indhumahalakshmi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(0, 0, 0, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #bbbbbb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #999999;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 6px;
+            background: #00e5ff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px #00e5ff;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .title span {
+            color: #00e5ff;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            color: #bbbbbb;
+        }
+
+        .skills-container,
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #101010;
+            padding: 25px;
+            border: 1px solid #222;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #999;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+            color: #bbbbbb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0a0a0a;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>A. Indhumahalakshmi</h1>
-<p>Welcome to My Portfolio</p>
+    <nav>
+        <div class="logo">INDHU.</div>
 
-<h2>Career Aim</h2>
-<p>To become a Data Analyst and build a successful career in Data Analytics.</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<h2>Skills</h2>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>MS Excel</li>
-    <li>Data Analytics</li>
-</ul>
+    <section class="hero" id="home">
+        <div>
+            <h1>Hi, I'm <span>A. Indhumahalakshmi</span></h1>
 
-<h2>Project</h2>
-<ul>
-    <li>Placement Management System</li>
-</ul>
+            <h2>AI & Data Science Student | Aspiring Data Analyst</h2>
 
-<h2>Internship & Certificates</h2>
-<ul>
-    <li>Data Analytics Internship</li>
-    <li>Data Analytics Certificate</li>
-</ul>
+            <p>
+                Passionate about Data Analytics, Artificial Intelligence and
+                technology. I enjoy learning programming, analysing data and
+                building useful projects.
+            </p>
 
-<h2>Contact</h2>
-<p>Email: avudappan78@gmail.com</p>
+            <div class="buttons">
+                <a href="#projects" class="btn">View Projects</a>
 
-<script src="script.js"></script>
+                <a href="https://www.linkedin.com/in/avudaiappan-maha-89b8bb33a"
+                   target="_blank"
+                   class="btn">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="title">About <span>Me</span></h2>
+
+        <div class="about">
+            <p>
+                I am a B.Tech Artificial Intelligence and Data Science student.
+                My career interest is Data Analytics. I am developing my skills
+                in Python, SQL, Excel and programming technologies. My goal is
+                to use data and technology to solve real-world problems and
+                grow as a technology professional.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="title">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="card"><h3>Python</h3></div>
+            <div class="card"><h3>SQL</h3></div>
+            <div class="card"><h3>Excel</h3></div>
+            <div class="card"><h3>Java</h3></div>
+            <div class="card"><h3>C</h3></div>
+            <div class="card"><h3>C++</h3></div>
+            <div class="card"><h3>HTML</h3></div>
+            <div class="card"><h3>Data Analytics</h3></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="title">My <span>Projects</span></h2>
+
+        <div class="project-container">
+
+            <div class="card">
+                <h3>Placement Management System</h3>
+
+                <p>
+                    A Flask-based placement management system designed to
+                    manage students, companies and placement applications.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>College Data Dashboard</h3>
+
+                <p>
+                    A data analytics dashboard created to analyse and
+                    visualise college-related data.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Data Analytics Projects</h3>
+
+                <p>
+                    Data analysis projects using Python, Excel and
+                    visualisation techniques.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="title">Contact <span>Me</span></h2>
+
+        <p>Email: avudappan78@gmail.com</p>
+
+        <a href="mailto:avudappan78@gmail.com" class="btn">
+            Send Email
+        </a>
+
+        <a href="https://www.linkedin.com/in/avudaiappan-maha-89b8bb33a"
+           target="_blank"
+           class="btn">
+            LinkedIn Profile
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 A. Indhumahalakshmi | Portfolio</p>
+    </footer>
 
 </body>
 </html>
